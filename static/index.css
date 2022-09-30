@@ -1,0 +1,76 @@
+:root{
+    --pageBackground: rgb(42, 42, 42);
+    --navBackground: rgb(71, 71, 71);
+    --titleColor: rgb(187, 187, 187);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#navBar{
+    display: flex;
+    z-index: 999;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--navBackground);
+    justify-content: center;
+    align-items: center;
+
+}
+
+#navTitle{
+    font-size: 3rem;
+    font-weight: 700;
+    font-family:'Trebuchet MS';
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
+
+}
+
+#pageContent{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--pageBackground);
+    align-items: center;
+    justify-content: center;
+    z-index: -999;
+}
+
+#movieInput{
+    z-index: 1;
+}
+
+#movieName{
+    width: 50vw;
+    border-radius: 1rem;
+    flex: 1 1 0%;
+    font-size: 3rem;
+    background-color: var(--navBackground);
+    font-family: 'Trebuchet MS';
+    border: solid var(--pageBackground);
+    color: white;
+    padding-left: 20px;
+}
+
+#formSubmit{
+    flex: 1 1 0%;
+    font-size: 2rem;
+    background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
+    font-family: 'Trebuchet MS';
+    border-radius: 2rem;
+    color: rgb(147, 147, 147);
+    padding: 0.7rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-bottom: 0.7rem;
+    border: solid var(--pageBackground);
+}
+
+#formSubmit:hover{
+    font-size: 2.1rem;
+}

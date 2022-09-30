@@ -1,0 +1,138 @@
+:root{
+    --pageBackground: rgb(42, 42, 42);
+    --navBackground: rgb(71, 71, 71);
+    --titleColor: rgb(187, 187, 187);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#navBar{
+    display: flex;
+    z-index: 999;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--navBackground);
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+
+}
+
+#navTitle{
+    font-size: 3rem;
+    font-weight: 700;
+    font-family:'Trebuchet MS';
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
+}
+
+#filler{
+    display: flex;
+    height: 10vh;
+    width: 100vw;
+    z-index: -999;
+}
+
+#backButtonContainer{
+    display: flex;
+    width: 100vw;
+    height: 5vh;
+    z-index: -999;
+    background-color: var(--pageBackground);
+    align-items: center;
+}
+
+#backButton{
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
+    font-family: 'Trebuchet MS';
+    color: var(--pageBackground);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid var(--navBackground);
+}
+
+#backButton:hover{
+    font-size: 1.5rem;
+}
+
+#mainContent{
+    display: flex;
+    width: 100vw;
+    height: 85vh;
+    z-index: -999;
+    background-color: var(--pageBackground);
+}
+
+#movieName{
+    font-size: 4rem;
+    background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Trebuchet MS';
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#movieInfoContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 70vh;
+}
+
+#amcLabels{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#isPlayingLabel{
+    font-size: 2rem;
+    color: white;
+    font-family: 'Trebuchet MS';
+    margin-left: 10px;
+}
+
+#moviePoster{
+    object-fit: contain;
+}
+
+#posterContainer{
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.reviewsContainer{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-left: 10px;
+    max-height: 20vh;
+}
+
+.reviewsLabel{
+    font-size: 1.5rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right,  #ee9ca7, #ffdde1);
+    font-family: 'Trebuchet MS';
+    margin-top: 5vh;
+    margin-left: 10px;
+}
+
+.review{
+    font-size: 1rem;
+    font-family: 'Trebuchet MS';
+    color: white;
+}

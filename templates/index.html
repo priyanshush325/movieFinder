@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <link rel = "stylesheet" href ="{% static 'index.css' %}">
+</head>
+<body>
+    <div id = "navBar">
+        <div id = "navTitle">
+            MOVIE FINDER
+        </div>
+    </div>
+    <div id = "pageContent">
+        <form id = "movieInput" method="POST" action="finder">
+            {% csrf_token %}
+            <input type="text" name = "movieName" id="movieName" placeholder ="Enter a movie...">
+            <input type="submit" value=" 🍿 " id="formSubmit">
+        </form>
+    </div>
+</body>

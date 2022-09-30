@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <link rel = "stylesheet" href = "{% static 'finder.css' %}">
+</head>
+
+<body>
+    <div id = "navBar">
+        <div id = "navTitle">MOVIE FINDER</div>
+    </div>
+    <div id = "filler"></div>
+    <div id = "backButtonContainer">
+            <button id = "backButton" onclick = "history.back()">&lt; GO BACK</button>
+    </div>
+
+    <div id="mainContent">
+        <div id = "movieInfoContainer">
+            <div id = "amcLabels">
+                <div id = "movieName">{{movieName}}</div>
+                {% if isPlaying == True %}
+                <div id = "isPlayingLabel">PLAYING IN AMC THEATERS</div>
+                {% else %}
+                <div id = "isPlayingLabel">NOT PLAYING IN AMC THEATERS</div>
+                {% endif %}
+                <div class = "reviewsLabel">CRITIC REVIEWS</div>
+                <div class = "reviewsContainer">
+                    {% if criticsSize == 0 %} 
+                    <div class = "review">NO REVIEWS FOUND</div>
+                    {% endif %}
+                    {% for criticReview in criticsReviews %} 
+                    <div class = "review">"{{criticReview}}"</div><br>
+                    {% endfor %}
+                </div>
+                <div class = "reviewsLabel">USER REVIEWS</div>
+                <div class = "reviewsContainer">
+                    {% if usersSize == 0 %} 
+                    <div class = "review">NO REVIEWS FOUND</div>
+                    {% endif %} 
+                    {% for userReview in usersReviews %} 
+                    <div class = "review">"{{userReview}}"</div><br>
+                    {% endfor %} 
+                </div>
+            </div>
+            {% if isPlaying == True %}
+            <div id = "posterContainer">
+                <img src = {{posterSource}} id = "moviePoster">
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
