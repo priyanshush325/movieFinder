@@ -3,5 +3,5 @@ Web App that displays poster, RottenTomatoes reviews, and whether or not AMC is 
 and Python using Django Framework and BeautifulSoup library.
 
 ## Dependencies
-Requires BeautifulSoup and Django Framework to be installed.
+Requires Python BeautifulSoup library, requests library, and Django Framework to be installed.
 
